@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdf6f0;
+  --foreground: #4a3728;
+  --cream: #fdf6f0;
+  --warm-brown: #8b6f5c;
+  --dark-brown: #4a3728;
+  --soft-pink: #f5e1da;
+  --accent-pink: #e8c4b8;
+  --button-red: #8b3a3a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-gaegu);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-gaegu), "Gaegu", cursive;
+  overflow-x: hidden;
+}
+
+/* Falling Petals Animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(25vh) rotate(90deg) translateX(20px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg) translateX(-20px);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(75vh) rotate(270deg) translateX(20px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) translateX(-10px);
+    opacity: 0;
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(30px) rotate(10deg);
+  }
+  75% {
+    transform: translateX(-30px) rotate(-10deg);
+  }
+}
+
+.petal {
+  position: fixed;
+  top: -100px;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0;
+  animation: fall linear infinite;
+}
+
+.petal-1 {
+  animation-duration: 8s;
+}
+.petal-2 {
+  animation-duration: 10s;
+}
+.petal-3 {
+  animation-duration: 12s;
+}
+.petal-4 {
+  animation-duration: 9s;
+}
+.petal-5 {
+  animation-duration: 11s;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--warm-brown);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-brown);
+}
+
+/* Screenshot hover effect */
+.screenshot-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(74, 55, 40, 0.2);
+}
+
+/* Flower decoration animation */
+@keyframes gentle-sway {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.flower-decoration {
+  animation: gentle-sway 4s ease-in-out infinite;
+}
+
+/* Button hover effect */
+.cta-button {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 58, 58, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 58, 58, 0.4);
+}
+
+/* Feature card hover */
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #fdf6f0 0%, #f5e1da 100%);
+}
