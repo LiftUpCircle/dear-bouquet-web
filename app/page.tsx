@@ -7,45 +7,8 @@ export default function Home() {
       {/* Falling Petals */}
       <FallingPetals />
 
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-[#FDF6F0]/90 backdrop-blur-sm border-b border-[#E8C4B8]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <span className="text-2xl font-semibold text-[#4A3728]">
-              Dear Bouquet
-            </span>
-          </div>
-          <nav className="hidden md:flex gap-8">
-            <a
-              href="#features"
-              className="text-lg text-[#8B6F5C] hover:text-[#4A3728] transition-colors"
-            >
-              Features
-            </a>
-            <a
-              href="#gameplay"
-              className="text-lg text-[#8B6F5C] hover:text-[#4A3728] transition-colors"
-            >
-              Gameplay
-            </a>
-            <a
-              href="#about"
-              className="text-lg text-[#8B6F5C] hover:text-[#4A3728] transition-colors"
-            >
-              About
-            </a>
-          </nav>
-          <a
-            href="#download"
-            className="bg-[#8B3A3A] text-white px-5 py-2 rounded-full text-base font-medium hover:bg-[#7A3333] transition-colors"
-          >
-            Download
-          </a>
-        </div>
-      </header>
-
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Flower Decorations - Left */}
         <div className="hidden lg:block absolute left-8 top-1/2 -translate-y-1/2 opacity-60">
           <div className="flex flex-col gap-6 flower-decoration">
@@ -354,7 +317,7 @@ export default function Home() {
           </p>
 
           <a
-            href="https://testflight.apple.com/join/A4yrZ6vw"
+            href="https://apps.apple.com/us/app/dear-bouquet/id6755093749"
             target="_blank"
             rel="noopener noreferrer"
             className="cta-button inline-block bg-[#4A3728] text-white px-10 py-5 rounded-2xl text-lg font-medium"
