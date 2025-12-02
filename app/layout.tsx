@@ -9,9 +9,9 @@ const gaegu = Gaegu({
 });
 
 export const metadata: Metadata = {
-  title: "Dear Bouquet - A Heartfelt Narrative Game",
+  title: "Dear Bouquet - A Cozy Storytelling Game",
   description:
-    "A heartfelt narrative game where every flower tells a story. Craft meaningful bouquets and discover the language of flowers.",
+    "A cozy storytelling games to help players unwind, decompress, and enjoy a moment of ease.",
 };
 
 export default function RootLayout({

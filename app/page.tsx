@@ -7,45 +7,8 @@ export default function Home() {
       {/* Falling Petals */}
       <FallingPetals />
 
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-[#FDF6F0]/90 backdrop-blur-sm border-b border-[#E8C4B8]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <span className="text-xl font-semibold text-[#4A3728]">
-              Dear Bouquet
-            </span>
-          </div>
-          <nav className="hidden md:flex gap-8">
-            <a
-              href="#features"
-              className="text-[#8B6F5C] hover:text-[#4A3728] transition-colors"
-            >
-              Features
-            </a>
-            <a
-              href="#gameplay"
-              className="text-[#8B6F5C] hover:text-[#4A3728] transition-colors"
-            >
-              Gameplay
-            </a>
-            <a
-              href="#about"
-              className="text-[#8B6F5C] hover:text-[#4A3728] transition-colors"
-            >
-              About
-            </a>
-          </nav>
-          <a
-            href="#download"
-            className="bg-[#8B3A3A] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#7A3333] transition-colors"
-          >
-            Download
-          </a>
-        </div>
-      </header>
-
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Flower Decorations - Left */}
         <div className="hidden lg:block absolute left-8 top-1/2 -translate-y-1/2 opacity-60">
           <div className="flex flex-col gap-6 flower-decoration">
@@ -77,7 +40,7 @@ export default function Home() {
             style={{ animationDelay: "2s" }}
           >
             <Image
-              src="/assets/Flowers/Rose.png"
+              src="/assets/Flowers/Carnations.png"
               alt=""
               width={70}
               height={100}
@@ -101,10 +64,11 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#4A3728] mb-6 leading-tight">
             Dear Bouquet
           </h1>
-          <p className="text-lg sm:text-xl text-[#8B6F5C] mb-4 max-w-2xl mx-auto leading-relaxed">
-            A heartfelt narrative game where every flower tells a story
+          <p className="text-xl sm:text-2xl text-[#8B6F5C] mb-4 max-w-2xl mx-auto leading-relaxed">
+            A cozy storytelling games to help players unwind, decompress, and
+            enjoy a moment of ease.
           </p>
-          <p className="text-base text-[#8B6F5C]/80 mb-10 max-w-xl mx-auto">
+          <p className="text-lg text-[#8B6F5C]/80 mb-10 max-w-xl mx-auto">
             Step into a cozy flower shop on its final days. Listen to
             customers&apos; stories, craft meaningful bouquets, and discover the
             language of flowers.
@@ -119,16 +83,16 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Hero Screenshot */}
+          {/* Hero Video Demo */}
           <div className="relative max-w-3xl mx-auto">
             <div className="screenshot-card rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-              <Image
-                src="/assets/Demo/MainMenu.png"
-                alt="Dear Bouquet Main Menu"
-                width={1200}
-                height={675}
+              <video
+                src="/assets/Demo/GameplayDemo.mov"
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-auto"
-                priority
               />
             </div>
             {/* Decorative elements */}
@@ -148,7 +112,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#4A3728] mb-4">
               Craft Stories with Flowers
             </h2>
-            <p className="text-[#8B6F5C] max-w-2xl mx-auto">
+            <p className="text-lg text-[#8B6F5C] max-w-2xl mx-auto">
               Every bloom carries meaning. Every bouquet tells a tale.
             </p>
           </div>
@@ -156,10 +120,10 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <div className="feature-card bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-[#E8C4B8]/50">
-              <h3 className="text-xl font-semibold text-[#4A3728] mb-3">
+              <h3 className="text-2xl font-semibold text-[#4A3728] mb-3">
                 Heartfelt Stories
               </h3>
-              <p className="text-[#8B6F5C]">
+              <p className="text-lg text-[#8B6F5C]">
                 Listen to touching stories from customers visiting the shop.
                 Each character brings their own journey, hopes, and memories.
               </p>
@@ -167,10 +131,10 @@ export default function Home() {
 
             {/* Feature 2 */}
             <div className="feature-card bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-[#E8C4B8]/50">
-              <h3 className="text-xl font-semibold text-[#4A3728] mb-3">
+              <h3 className="text-2xl font-semibold text-[#4A3728] mb-3">
                 Flower Arranging
               </h3>
-              <p className="text-[#8B6F5C]">
+              <p className="text-lg text-[#8B6F5C]">
                 Drag and drop beautiful flowers to create meaningful bouquets.
                 Learn the language of flowers and match emotions to blooms.
               </p>
@@ -178,10 +142,10 @@ export default function Home() {
 
             {/* Feature 3 */}
             <div className="feature-card bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-[#E8C4B8]/50">
-              <h3 className="text-xl font-semibold text-[#4A3728] mb-3">
+              <h3 className="text-2xl font-semibold text-[#4A3728] mb-3">
                 Memories Collection
               </h3>
-              <p className="text-[#8B6F5C]">
+              <p className="text-lg text-[#8B6F5C]">
                 Save every bouquet you create in your memories book. Revisit the
                 stories and the flowers that touched hearts.
               </p>
@@ -215,7 +179,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#4A3728] mb-4">
               A Peek Inside the Shop
             </h2>
-            <p className="text-[#8B6F5C] max-w-2xl mx-auto">
+            <p className="text-lg text-[#8B6F5C] max-w-2xl mx-auto">
               Experience the warmth of Dear Bouquet through these glimpses
             </p>
           </div>
@@ -231,10 +195,10 @@ export default function Home() {
                 className="w-full h-auto"
               />
               <div className="bg-white/80 backdrop-blur-sm p-4">
-                <h3 className="font-semibold text-[#4A3728]">
+                <h3 className="text-lg font-semibold text-[#4A3728]">
                   Listen to Stories
                 </h3>
-                <p className="text-sm text-[#8B6F5C]">
+                <p className="text-base text-[#8B6F5C]">
                   Engage with heartfelt dialogues from visitors
                 </p>
               </div>
@@ -250,10 +214,10 @@ export default function Home() {
                 className="w-full h-auto"
               />
               <div className="bg-white/80 backdrop-blur-sm p-4">
-                <h3 className="font-semibold text-[#4A3728]">
+                <h3 className="text-lg font-semibold text-[#4A3728]">
                   Arrange Bouquets
                 </h3>
-                <p className="text-sm text-[#8B6F5C]">
+                <p className="text-base text-[#8B6F5C]">
                   Craft beautiful arrangements with meaning
                 </p>
               </div>
@@ -281,46 +245,54 @@ export default function Home() {
             customers express their deepest emotions through carefully crafted
             bouquets.
           </p>
-          <p className="text-[#8B6F5C] mb-10">
+          <p className="text-lg text-[#8B6F5C] mb-10">
             Every flower has a meaning. Every arrangement tells a story. Every
             customer leaves with a piece of their heart wrapped in petals.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-8 text-sm text-[#8B6F5C]">
+          <div className="flex flex-wrap justify-center gap-12 text-base text-[#8B6F5C]">
             <div className="flex flex-col items-center gap-2">
-              <Image
-                src="/assets/Flowers/Rose.png"
-                alt="Rose"
-                width={40}
-                height={60}
-              />
+              <div className="h-24 flex items-end justify-center">
+                <Image
+                  src="/assets/Flowers/Rose.png"
+                  alt="Rose"
+                  width={50}
+                  height={75}
+                />
+              </div>
               <span>Rose - Love</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <Image
-                src="/assets/Flowers/Lavender.png"
-                alt="Lavender"
-                width={40}
-                height={60}
-              />
+              <div className="h-24 flex items-end justify-center">
+                <Image
+                  src="/assets/Flowers/Lavender.png"
+                  alt="Lavender"
+                  width={50}
+                  height={75}
+                />
+              </div>
               <span>Lavender - Serenity</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <Image
-                src="/assets/Flowers/Jasmine.png"
-                alt="Jasmine"
-                width={40}
-                height={60}
-              />
+              <div className="h-24 flex items-end justify-center">
+                <Image
+                  src="/assets/Flowers/Jasmine.png"
+                  alt="Jasmine"
+                  width={50}
+                  height={75}
+                />
+              </div>
               <span>Jasmine - Purity</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <Image
-                src="/assets/Flowers/Carnations.png"
-                alt="Carnation"
-                width={40}
-                height={60}
-              />
+              <div className="h-24 flex items-end justify-center">
+                <Image
+                  src="/assets/Flowers/Carnations.png"
+                  alt="Carnation"
+                  width={50}
+                  height={75}
+                />
+              </div>
               <span>Carnation - Joy</span>
             </div>
           </div>
@@ -339,13 +311,13 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-bold text-[#4A3728] mb-6">
             Start Your Journey
           </h2>
-          <p className="text-[#8B6F5C] mb-10 max-w-xl mx-auto">
+          <p className="text-lg text-[#8B6F5C] mb-10 max-w-xl mx-auto">
             Download Dear Bouquet and discover the language of flowers.
             Available now on iOS devices.
           </p>
 
           <a
-            href="https://testflight.apple.com/join/A4yrZ6vw"
+            href="https://apps.apple.com/us/app/dear-bouquet/id6755093749"
             target="_blank"
             rel="noopener noreferrer"
             className="cta-button inline-block bg-[#4A3728] text-white px-10 py-5 rounded-2xl text-lg font-medium"
@@ -368,12 +340,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
-              <span className="text-lg font-medium text-white">
+              <span className="text-xl font-medium text-white">
                 Dear Bouquet
               </span>
             </div>
 
-            <div className="flex gap-6 text-sm">
+            <div className="flex gap-6 text-base">
               <a href="#" className="hover:text-white transition-colors">
                 Privacy Policy
               </a>
@@ -385,7 +357,7 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="text-sm">
+            <p className="text-base">
               © 2025 Dear Bouquet. Made with ❤️ by LiftUp Circle
             </p>
           </div>
