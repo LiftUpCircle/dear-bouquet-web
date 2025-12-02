@@ -11,28 +11,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'pnpm'
+      - uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Build
-        run: pnpm build
+        run: bun run build
 
       - name: Deploy to server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST_ADDRESS }}
           username: ${{ secrets.HOST_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: ".next/,package.json,pnpm-lock.yaml,public/"
+          key: ${{ secrets.DAMN_KEY }}
+          source: ".next/,package.json,bun.lock,public/"
           target: "~/dear-bouquet-web"
           overwrite: true
 
@@ -41,8 +34,8 @@ jobs:
         with:
           host: ${{ secrets.HOST_ADDRESS }}
           username: ${{ secrets.HOST_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ secrets.DAMN_KEY }}
           script: |
             cd ~/dear-bouquet-web
-            pnpm install --frozen-lockfile --prod
+            bun install --frozen-lockfile --production
             sudo systemctl restart dear-bouquet-web
