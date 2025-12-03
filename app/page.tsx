@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import FallingPetals from "./components/FallingPetals";
 
 export default function Home() {
@@ -98,6 +99,36 @@ export default function Home() {
             {/* Decorative elements */}
             <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-[#F5E1DA] rounded-full opacity-50 blur-xl" />
             <div className="absolute -top-4 -right-4 w-16 h-16 bg-[#E8C4B8] rounded-full opacity-50 blur-xl" />
+          </div>
+        </div>
+      </section>
+
+      {/* Competition Banner */}
+      <section className="py-12 bg-gradient-to-r from-[#8B3A3A] via-[#A84444] to-[#8B3A3A]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <div className="mb-4">
+            <span className="text-4xl">🏆</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3">
+            Bouquet Competition
+          </h2>
+          <p className="text-white/90 mb-6 max-w-xl mx-auto">
+            Play our game, create the most beautiful bouquet, and win{" "}
+            <span className="font-bold">GoPay prizes!</span>
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="/competition"
+              className="bg-white text-[#8B3A3A] px-8 py-3 rounded-full font-bold hover:bg-[#FDF6F0] transition-colors shadow-lg"
+            >
+              Submit Your Bouquet
+            </Link>
+            <Link
+              href="/album"
+              className="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-colors"
+            >
+              View Album & Vote
+            </Link>
           </div>
         </div>
       </section>
