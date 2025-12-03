@@ -26,7 +26,7 @@ jobs:
           username: ${{ secrets.HOST_USER }}
           key: ${{ secrets.DAMN_KEY }}
           source: ".next/,package.json,bun.lock,public/"
-          target: "~/dear-bouquet-web"
+          target: "/srv/dear-bouquet-web"
           overwrite: true
 
       - name: Install and restart service
@@ -36,6 +36,6 @@ jobs:
           username: ${{ secrets.HOST_USER }}
           key: ${{ secrets.DAMN_KEY }}
           script: |
-            cd ~/dear-bouquet-web
+            cd /srv/dear-bouquet-web
             bun install --frozen-lockfile --production
             sudo systemctl restart dear-bouquet-web
