@@ -389,7 +389,7 @@ export default function Home() {
             </div>
 
             <p className="text-base">
-              © 2025 Dear Bouquet. Made with ❤️ by LiftUp Circle
+              © 2025 Dear Bouquet. Made with ❤️ by LiftUpCircle
             </p>
           </div>
         </div>
